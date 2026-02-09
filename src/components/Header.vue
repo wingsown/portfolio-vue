@@ -1,27 +1,30 @@
 <template>
   <header class="header" id="header">
     <nav class="nav container">
-      <!-- Logo -->
+      <!-- LOGO -->
       <a href="#" class="nav__logo">
-        <!-- <img
+        <img
           src="@/assets/img/Icon_4.png"
           alt="Logo"
           class="nav__logo-img logo-img"
-        /> -->
+        />
       </a>
 
-      <!-- Menu -->
-      <div class="nav__menu" :class="{ 'show-menu': isMenuOpen }">
+      <!-- MENU -->
+      <div
+        class="nav__menu"
+        id="nav-menu"
+        :class="{ 'show-menu': isMenuOpen }"
+      >
         <ul class="nav__list grid">
           <li
+            class="nav__item"
             v-for="item in navItems"
             :key="item.id"
-            class="nav__item"
           >
             <a
               :href="item.href"
               class="nav__link"
-              :class="{ 'active-link': activeSection === item.id }"
               @click="closeMenu"
             >
               <i :class="item.icon" class="nav__icon"></i>
@@ -30,24 +33,28 @@
           </li>
         </ul>
 
-        <!-- Close button -->
+        <!-- CLOSE BUTTON -->
         <i
           class="uil uil-times nav__close"
+          id="nav-close"
           @click="closeMenu"
         ></i>
       </div>
 
-      <!-- Buttons -->
+      <!-- BUTTONS -->
       <div class="nav__btns">
-        <!-- Theme toggle -->
+         <!-- THEME TOGGLE -->
         <i
           class="uil change-theme"
           :class="isDark ? 'uil-sun' : 'uil-moon-eclipse'"
           @click="toggleTheme"
         ></i>
-
-        <!-- Mobile toggle -->
-        <div class="nav__toggle" @click="openMenu">
+        <!-- MOBILE TOGGLE -->
+        <div
+          class="nav__toggle"
+          id="nav-toggle"
+          @click="openMenu"
+        >
           <i class="uil uil-apps"></i>
         </div>
       </div>
@@ -55,12 +62,11 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
 const isMenuOpen = ref(false)
 const isDark = ref(false)
-const activeSection = ref('home')
 
 const navItems = [
   { id: 'home', href: '#home', label: 'Home', icon: 'uil uil-estate' },
@@ -72,14 +78,18 @@ const navItems = [
   { id: 'contact', href: '#contact', label: 'Contact', icon: 'uil uil-message' }
 ]
 
+// ===== MENU SHOW =====
 const openMenu = () => {
   isMenuOpen.value = true
 }
 
+// ===== MENU HIDDEN =====
 const closeMenu = () => {
   isMenuOpen.value = false
 }
 
+
+/* ==================== THEME ==================== */
 const toggleTheme = () => {
   isDark.value = !isDark.value
   document.body.classList.toggle('dark-theme', isDark.value)

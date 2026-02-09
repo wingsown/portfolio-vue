@@ -1,0 +1,18 @@
+/* ==================== HEADER ==================== */
+
+/* show menu */
+.nav__menu.show-menu {
+  bottom: 0;
+}
+
+/* Active link */
+.active-link {
+  color: var(--first-color-copy);
+}
+
+/* Change background header */
+.scroll-header {
+  background-color: var(--nav-color);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s linear;
+}
