@@ -1,0 +1,30 @@
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --first-color-copy: #fbfbfe;
+  --first-color-second: #808080 /*hsl(var(--hue-color), 69%, 61%)*/;
+  --title-color: #fbfbfe /*hsl(var(--hue-color), 8%, 15%)*/;
+  --text-color: #d9d9d9 /*hsl(var(--hue-color), 8%, 45%)*/;
+  --input-color: #f5f6fc /*#eef0fc  /*hsl(var(--hue-color), 70%, 96%)*/;
+  --body-color: #383838 /*#404040/*hsl(var(--hue-color), 60%, 99%)*/;
+  --container-color: #404040;
+  --scroll-bar-color: #232429 /*hsl(var(--hue-color), 60%, 99%)*/;
+  --scroll-thumb-color: #404040 /*hsl(var(--hue-color), 60%, 99%)*/;
+  --nav-color: #262626;
+}
+
+/*========== Button Dark/Light ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--first-color-copy);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+
+/* .change-theme:hover {
+    color: var(--first-color-second);
+} */
