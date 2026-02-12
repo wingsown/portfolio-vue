@@ -1,13 +1,17 @@
 /* ==================== HEADER ==================== */
 
-/* show menu */
-.nav__menu.show-menu {
+.header {
+  width: 100%;
+  position: fixed;
   bottom: 0;
-}
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
 
-/* Active link */
-.active-link {
-  color: var(--first-color-copy);
+  @media screen and (min-width: 790px) {
+    top: 0;
+    bottom: initial;
+  }
 }
 
 /* Change background header */
