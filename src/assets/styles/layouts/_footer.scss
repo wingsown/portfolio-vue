@@ -1,0 +1,39 @@
+/*==================== FOOTER MEDIA QUERIES ====================*/
+
+.footer {
+  /* Medium devices */
+  @media screen and (min-width: 568px) {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Large devices */
+  @media screen and (min-width: 790px) {
+    &__title,
+    &__subtitle {
+      margin-left: 2rem;
+    }
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__bg {
+      padding: 3rem 0 3.5rem;
+    }
+
+    &__links {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+
+    &__socials {
+      justify-self: flex-end;
+    }
+
+    &__copy {
+      margin-top: 4.5rem;
+    }
+  }
+}
