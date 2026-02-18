@@ -7,8 +7,11 @@
 
   &__content {
     grid-template-columns: max-content 1fr;
-    column-gap: 2.25rem;
-    padding-top: 2rem;
+    column-gap: 2rem;
+    // padding-top: 2rem;
+    // align-items: center;
+    // grid-template-columns: 50px 1fr;
+    // padding-top: 3.5rem;
     align-items: center;
   }
 
