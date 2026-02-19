@@ -1,6 +1,6 @@
 <template>
   <section class="home section" id="home">
-    <div class="home__container container grid">
+    <div class="home__container grid">
       <div class="home__content grid">
 
         <div class="home__social">
