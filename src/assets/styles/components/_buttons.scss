@@ -14,3 +14,90 @@
 /* .change-theme:hover {
     color: var(--first-color-second);
 } */
+
+/*==================== BUTTONS ====================*/
+
+.button {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--first-color);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--first-color-alt);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ========= ICONS ========= */
+  &__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: 0.3s;
+
+    &-proj {
+      font-size: 1rem;
+      margin-left: var(--mb-0-25);
+    }
+  }
+
+  /* ========= MODIFIERS ========= */
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &--small {
+    padding: 0.75rem 1rem;
+  }
+
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--first-color-second);
+    box-shadow: none;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--first-color-copy);
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: var(--first-color);
+
+    &:hover {
+      background-color: var(--first-color);
+      color: #fff;
+    }
+  }
+
+  /* ========= VARIANTS ========= */
+
+  &-alt {
+    background-color: var(--body-color);
+    color: var(--first-color-copy);
+    border: 1.5px var(--first-color) solid;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-alt-2 {
+    background-color: var(--first-color-alt);
+    color: var(--body-color-alt);
+
+    &:hover {
+      background-color: var(--body-color-alt);
+      color: var(--first-color-alt);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
